@@ -14,7 +14,7 @@ exclude = ["poetry_pypi_example/**/*.py"]
 python = "^3.6"
 
 [tool.poetry.dev-dependencies]
-Cython = "3.0a6"
+Cython = "^0.29.21"
 
 [build-system]
 requires = ["poetry-core>=1.0.0", "setuptools~=50.3.2"]
