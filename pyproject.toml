@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "poetry-pypi-example"
+version = "0.0.1"
+description = "Example project for demonstrating proprietary PyPI packages"
+authors = ["Aotu"]
+license = "Proprietary"
+readme = "README.rst"
+
+# Only include cythonized files in final build
+include = ["poetry_pypi_example/**/*.so"]  # ignored in VCS, so we need to be explicit
+exclude = ["poetry_pypi_example/**/*.py"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+Cython = "3.0a6"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "setuptools~=50.3.2"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.build]
+# The allows us to build C extensions (using Cython). Unstable feature
+# https://github.com/python-poetry/poetry/issues/2740#issuecomment-666551481
+script = "build.py"
+generate-setup-file = false

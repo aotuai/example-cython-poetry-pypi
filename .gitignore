@@ -1,0 +1,14 @@
+.idea/
+
+__pycache__/
+*.pyc
+
+# Cythonization
+*.c
+*.so
+cython_build/
+*.egg-info
+
+# Distribution
+/build/
+/dist/
