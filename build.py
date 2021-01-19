@@ -71,7 +71,7 @@ def cythonize_helper(extension_modules: List[Extension]) -> List[Extension]:
         # Tell Cython we're using Python 3
         compiler_directives={"language_level": "3"},
 
-        # (Optional) Always rebuild, even if file untouched
+        # (Optional) Always rebuild, even if files untouched
         force=True,
     )
 
